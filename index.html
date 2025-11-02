@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Bun Run - a fast-paced 2D platformer" />
+  <title>Bun Run</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="game-root">
+    <canvas id="game-canvas" width="960" height="540" aria-label="Bun Run Game Canvas"></canvas>
+    <div id="hud">
+      <div class="hud-left">
+        <span class="hud-item" id="hud-time">? 60.0</span>
+        <span class="hud-item" id="hud-coins">?? 0 / 0</span>
+        <span class="hud-item" id="hud-level">Level 1</span>
+      </div>
+      <div class="hud-right">
+        <button id="btn-restart" class="btn small" title="Restart (R)">?</button>
+        <button id="btn-mute" class="btn small" title="Mute (M)">??</button>
+      </div>
+    </div>
+
+    <div id="overlay" class="overlay show">
+      <div class="panel">
+        <h1>Bun Run</h1>
+        <p class="subtitle">Dash, jump, and bounce to the goal before time runs out.</p>
+        <div class="controls">
+          <div><strong>Move</strong>: ? ? or A D</div>
+          <div><strong>Jump</strong>: Space / W / ?</div>
+          <div><strong>Restart</strong>: R</div>
+        </div>
+        <button id="btn-play" class="btn primary">Play</button>
+      </div>
+    </div>
+
+    <div id="touch-controls">
+      <button id="touch-left" class="btn circle" aria-label="Left">?</button>
+      <button id="touch-right" class="btn circle" aria-label="Right">?</button>
+      <button id="touch-jump" class="btn circle" aria-label="Jump">?</button>
+    </div>
+  </div>
+
+  <script src="/js/game.js"></script>
+</body>
+</html>
